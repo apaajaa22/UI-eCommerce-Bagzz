@@ -84,8 +84,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     padding: 8,
     paddingHorizontal: 40,
-    marginBottom: 20,
     borderRadius: 100,
-    marginHorizontal: 12,
+    position: 'absolute',
+    bottom: 10,
+    left: 10,
+    right: 10,
   },
 });

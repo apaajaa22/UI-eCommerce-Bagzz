@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Image, StyleSheet, View} from 'react-native';
+import {FlatList, Image, ScrollView, StyleSheet, View} from 'react-native';
 import {
   DummyItem1,
   DummyItem2,
@@ -31,38 +31,28 @@ const DATA = [
     image: DummyItem4,
   },
   {
-    id: 5,
-    title: 'Monogram',
-    image: DummyItem4,
+    id: 11,
+    title: 'Artsy',
+    image: DummyItem1,
   },
   {
-    id: 6,
-    title: 'Monogram',
-    image: DummyItem4,
+    id: 22,
+    title: 'Berkely',
+    image: DummyItem2,
   },
   {
-    id: 7,
-    title: 'Monogram',
-    image: DummyItem4,
+    id: 33,
+    title: 'Capucinus',
+    image: DummyItem3,
   },
   {
-    id: 8,
-    title: 'Monogram',
-    image: DummyItem4,
-  },
-  {
-    id: 9,
-    title: 'Monogram',
-    image: DummyItem4,
-  },
-  {
-    id: 10,
+    id: 44,
     title: 'Monogram',
     image: DummyItem4,
   },
 ];
 const renderItem = ({item}) => (
-  <ItemList title={item.title} image={item.image} key={item.id} />
+  <ItemList title={item.title} image={item.image} />
 );
 const Home = () => {
   return (
@@ -70,12 +60,13 @@ const Home = () => {
       <Header />
       <Gap height={28} />
       <Image source={ILBanner1} style={styles.image} />
-      <Gap height={30} />
+      <Gap height={10} />
       <FlatList
         showsVerticalScrollIndicator={false}
         data={DATA}
         renderItem={renderItem}
         numColumns={2}
+        keyExtractor={(item) => item.id}
       />
     </View>
   );
@@ -84,7 +75,12 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  page: {paddingHorizontal: 12, paddingVertical: 19, backgroundColor: 'white'},
+  page: {
+    paddingHorizontal: 12,
+    paddingVertical: 19,
+    backgroundColor: 'white',
+    flex: 1,
+  },
   image: {
     width: '100%',
     height: 195,

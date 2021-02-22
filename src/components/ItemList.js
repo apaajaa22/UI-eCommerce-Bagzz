@@ -6,11 +6,11 @@ const ItemList = ({title, image}) => {
   return (
     <TouchableOpacity style={styles.page}>
       <Image source={image} style={styles.image} />
-      <Text>{title}</Text>
-      <Text>Shop Now</Text>
-      <View style={styles.like}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.subtitle}>Shop Now</Text>
+      <TouchableOpacity style={styles.like}>
         <IcLike_off />
-      </View>
+      </TouchableOpacity>
     </TouchableOpacity>
   );
 };
@@ -25,9 +25,20 @@ const styles = StyleSheet.create({
     height: 210,
     paddingTop: 28,
     marginRight: 13,
-    marginBottom: 24,
+    marginBottom: 13,
     flex: 1,
+    borderRadius: 10,
   },
   image: {height: 111, width: 111},
   like: {position: 'absolute', right: 10, top: 10},
+  title: {
+    fontSize: 18,
+    fontFamily: 'PlayfairDisplay-SemiBold',
+    marginBottom: 5,
+  },
+  subtitle: {
+    fontSize: 16,
+    fontFamily: 'PlayfairDisplay-Bold',
+    borderBottomWidth: 1,
+  },
 });
