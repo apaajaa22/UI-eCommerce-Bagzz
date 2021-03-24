@@ -6,10 +6,12 @@ import IcSearch from './Ic_search.svg';
 import DummyUser from './DummyUser.png';
 import ILBanner1 from './ILBanner1.png';
 import IcMenu from './Ic_menu.svg';
+import IcClose from './Ic_close.svg';
 import DummyItem1 from './DummyItem1.png';
 import DummyItem2 from './DummyItem2.png';
 import DummyItem3 from './DummyItem3.png';
 import DummyItem4 from './DummyItem4.png';
+import DummyItemBag1 from './DummyitemBag1.png';
 
 export {
   IcBasket,
@@ -24,4 +26,6 @@ export {
   DummyItem2,
   DummyItem3,
   DummyItem4,
+  DummyItemBag1,
+  IcClose,
 };

@@ -2,7 +2,14 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Basket, Home, LikeItem, SearchItem, SplashScreen} from '../pages';
+import {
+  Basket,
+  Home,
+  itemSelected,
+  LikeItem,
+  SearchItem,
+  SplashScreen,
+} from '../pages';
 import CustomTab from '../components/CustomTab';
 
 const Stack = createStackNavigator();
@@ -30,6 +37,11 @@ const Router = () => {
       <Stack.Screen
         name="MyTab"
         component={MyTab}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="itemSelected"
+        component={itemSelected}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

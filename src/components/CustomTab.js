@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {IcHome, IcSearch, IcLike, IcBasket} from '../assets';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {IcBasket, IcHome, IcLike, IcSearch} from '../assets';
 
 const Icon = ({label}) => {
   switch (label) {
@@ -58,6 +58,7 @@ const CustomTab = ({state, descriptors, navigation}) => {
 
         return (
           <TouchableOpacity
+            key={label}
             accessibilityRole="button"
             accessibilityState={isFocused ? {selected: true} : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -82,12 +83,22 @@ const styles = StyleSheet.create({
     width: 'auto',
     height: 65,
     backgroundColor: 'white',
-    padding: 8,
+    margin: 8,
     paddingHorizontal: 40,
     borderRadius: 100,
     position: 'absolute',
     bottom: 10,
     left: 10,
     right: 10,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 2,
   },
 });

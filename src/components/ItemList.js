@@ -1,10 +1,14 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {DummyItem1, IcLike_off} from '../assets';
 
 const ItemList = ({title, image}) => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.page}>
+    <TouchableOpacity
+      style={styles.page}
+      onPress={() => navigation.navigate('itemSelected')}>
       <Image source={image} style={styles.image} />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>Shop Now</Text>

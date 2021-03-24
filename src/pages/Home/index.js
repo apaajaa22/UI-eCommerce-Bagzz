@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {FlatList, Image, ScrollView, StyleSheet, View} from 'react-native';
 import {
@@ -77,7 +78,7 @@ export default Home;
 const styles = StyleSheet.create({
   page: {
     paddingHorizontal: 12,
-    paddingVertical: 19,
+    paddingTop: 19,
     backgroundColor: 'white',
     flex: 1,
   },
